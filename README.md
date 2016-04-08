@@ -26,4 +26,15 @@ The Kordia algicida OT 1 [FASTA genome](http://www.ncbi.nlm.nih.gov/nuccore/NZ_D
 
 And for good measure I have also submitted the Kordia algicida OT 1 genome to BASys to see if BASys identifies the same number of genes as the PGDB in Pathway Tools has.
 
+Afternoon: I annotated the reverse complemented FASTA file with PROKKA and the results are very promising as shown in the table below. A bug in PROKKA caused the first analysis to fail because I didn't get the genbank file which was the whole purpose. I had to change ">1|quiver" in the FASTA file to ">1" because having a pipe "|" character in the name somehow causes an issue, this has more info: [Bug discussion](https://github.com/tseemann/prokka/issues/127)
+
+Organism | Pathways | Protein Genes | RNA Genes | Size (bp)
+-------- | -------- | ------------- | --------- | --------
+Kordia algicida | 200 | 4465 | 64 | 5,033,129
+Kordia sp. | 224 | 4686 | 63 | 5,493,758
+
+Given the larger genome it makes sense that our Kordia has more protein genes and thus more pathways. 
+
+I have placed the PROKKA analysis files in /nobackup/data9/oskar/prokka
+
 -Oskar
