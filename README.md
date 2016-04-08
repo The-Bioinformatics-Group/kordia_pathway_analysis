@@ -14,6 +14,7 @@ BASys annotation of reverse complemented FASTA file from yesterday complete.
 The settings that were used are "Gram Stain: Negative" and "Contig is: Circular". Everything else was set to default.
 
 A Pathway Tools database (PGDB) was created and compared to the Kordia algicida OT 1 PGDB from Pathway Tools and the results are as follows:
+
 Organism | Pathways | Protein Genes | RNA Genes | Size (bp)
 -------- | -------- | ------------- | --------- | --------
 Kordia algicida | 200 | 4465 | 64 | 5,033,129
