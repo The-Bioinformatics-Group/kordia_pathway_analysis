@@ -13,6 +13,8 @@ The same FASTA file was submitted to BASys for annotation.
 BASys annotation of reverse complemented FASTA file from yesterday complete.
 The settings that were used are "Gram Stain: Negative" and "Contig is: Circular". Everything else was set to default.
 
+[Link to the BASys analysis results](https://www.basys.ca/server3/basys/cache/d03d65baad28f43284c9c84b7586acf9/index.html)
+
 A Pathway Tools database (PGDB) was created and compared to the Kordia algicida OT 1 PGDB from Pathway Tools and the results are as follows:
 
 Organism | Pathways | Protein Genes | RNA Genes | Size (bp)
