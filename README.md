@@ -22,7 +22,7 @@ Kordia sp. | 149 | 1713 | 0 | 5,493,758
 
 It's safe to say that something is missing from the current genbank file for our Kordia.
 
-The Kordia algicida OT 1 [FASTA genome](http://www.ncbi.nlm.nih.gov/nuccore/NZ_DS544873.1) is linear and for that reason I have submitted a BASys analysis of the recerse complement unitig 1 + unitig 2 FASTA file with the "Contig is:" setting set to "Negative" to see if that changes the results.
+The Kordia algicida OT 1 [FASTA genome](http://www.ncbi.nlm.nih.gov/nuccore/NZ_DS544873.1) is linear and for that reason I have submitted a BASys analysis of the reverse complement unitig 1 + unitig 2 FASTA file with the "Contig is:" setting set to "Negative" to see if that changes the results.
 
 And for good measure I have also submitted the Kordia algicida OT 1 genome to BASys to see if BASys identifies the same number of genes as the PGDB in Pathway Tools has.
 
