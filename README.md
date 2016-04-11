@@ -79,3 +79,5 @@ base any further research on that. We can compare it to the Kordia algicida
 PGDB that was downloaded using Pathway Tools, and we should keep in mind that
 this is all automatic annotation and the identified pathways are not necessarily
 actually present in the bacteria.
+
+-Oskar
