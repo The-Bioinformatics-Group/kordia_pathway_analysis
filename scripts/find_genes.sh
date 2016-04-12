@@ -27,4 +27,6 @@ grep /gene= $2 | tr -s [:space:] | cut -c 9- | sed 's/.$//' | awk '!x[$0]++' | s
 
 wc -l $2_genes_sorted
 
-comm -12 $1_genes_sorted $2_genes_sorted | wc -l # this compares how many genes they have in common
+comm -12 $1_genes_sorted $2_genes_sorted | wc -l # this counts how many genes they have in common
+
+comm -12 $1_genes_sorted $2_genes_sorted > common_genes #this creates a list of all common genes

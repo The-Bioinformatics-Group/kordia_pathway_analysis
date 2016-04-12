@@ -81,3 +81,41 @@ this is all automatic annotation and the identified pathways are not necessarily
 actually present in the bacteria.
 
 -Oskar
+
+###April 12, 2016
+
+Added a script and genbank-files that were used to create a list of common 
+named genes between K. algicida and K. sp. 
+
+The K. algicida from genbank (Accession number NZ_DS544873.1) had only 35 
+named genes, the rest were hypothetical genes. Our Kordia, annotated with 
+PROKKA, has 1624 named genes. For this reason I decided to annotate the 
+K. algicida OT 1 genome with PROKKA and that resulted in 1528 named gened. 
+They have a total of 1170 named genes in common. The table below clarifies 
+this.
+
+gbk-file | Total Genes | Named genes | Common with our Kordia
+--- | --- | --- | ---
+K. algicida OT 1 from Genbank | 4578 | 35 | 26
+K. algicida OT 1 from PROKKA | 4478 | 1528 | 1170
+K. sp from PROKKA | 4749 | 1624 | -
+
+I created a script called 
+"find_genes.sh" that I used to find all named genes and compare how many of 
+them were common between the two gbk-files. I put it in the scripts folder. 
+Take a look at it before you use it because it has some quirks and isn't user 
+friendly yet; but in short, you need to run 
+"bash find_genes.sh link/to/file1 link/to/file2" to use it.
+
+I have also made a list of common named genes (called "common_genes"
+ and it is in the root folder) and used it to create two images to highlight 
+the common genes and pathways in the K. algicida OT 1 and K. sp. pathway 
+overlays in Pathway Tools. The images are called "common_genes_X.png" and are 
+in the root folder. Red lines denote common genes.
+
+If you compare the images you'll notice that some pathways look identical and 
+seemingly should have common genes highlighted, but some pathways have e.g 
+more genes associated with them, there are various other reasons for why there
+is a connection but too many to describe them here.
+
+-Oskar
