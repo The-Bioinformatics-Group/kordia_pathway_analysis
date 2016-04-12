@@ -118,4 +118,6 @@ seemingly should have common genes highlighted, but some pathways have e.g
 more genes associated with them, there are various other reasons for why there
 is a connection but too many to describe them here.
 
+Added a [Wiki](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/wiki)
+
 -Oskar
