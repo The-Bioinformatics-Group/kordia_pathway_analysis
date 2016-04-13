@@ -1,4 +1,9 @@
-#! bin/bash
+#!/bin/bash
+if [ $# -lt 2 ]; then
+  echo "Usage: $0 genbankfile1.gbk genbankfile2.gbk"
+  echo -e "Outputs a list of genes they have in common and a list of unique genes per genbank file. \nAs well as a short summary of the number of genes per file in the terminal window."
+  exit 1
+fi
 
 #use this script after you have read the comments, it removes any duplicates in case all gene instances in the
 #gbk-file are duplicated, as is the case with KalgicidaOT1.gbk, but if your file happens to have
@@ -19,14 +24,24 @@ grep /gene= $1 | tr -s [:space:] | cut -c 9- | sed 's/.$//' | awk '!x[$0]++' | s
 #two "fusA" genes which complicates things a bit, use this with caution
 # sort # simply sorts the results alphabetically in order to make it comparable with "comm" below
 
-wc -l $1_genes_sorted # count the number of genes
-
-grep /gene= $2 | tr -s [:space:] | cut -c 9- | sed 's/.$//' | awk '!x[$0]++' | sort > $2_genes_sorted
-
-# it's identical to the one above apart from the in- and out-put
-
-wc -l $2_genes_sorted
-
-comm -12 $1_genes_sorted $2_genes_sorted | wc -l # this counts how many genes they have in common
+grep /gene= $2 | tr -s [:space:] | cut -c 9- | sed 's/.$//' | awk '!x[$0]++' | sort > $2_genes_sorted # it's identical to the one above apart from the in- and output
 
 comm -12 $1_genes_sorted $2_genes_sorted > common_genes #this creates a list of all common genes
+
+comm -3 common_genes $1_genes_sorted > $1_unique_genes #this creates a list of genes unique to the first genbank file
+comm -3 common_genes $2_genes_sorted > $2_unique_genes #> $2_unique_genes #this does the same but for the second genbank file
+
+output1=$(grep -c ^ $1_genes_sorted)
+output2=$(grep -c ^ $1_unique_genes)
+fbname=$(basename "$1")
+echo "$fbname has $output1 genes and $output2 unique genes."
+
+output3=$(grep -c ^ $2_genes_sorted)
+output4=$(grep -c ^ $2_unique_genes)
+fbname=$(basename "$2")
+echo "$fbname has $output3 genes and $output4 unique genes."
+
+#echo "File 1 has $output3"
+#echo "File 2 has $output4"
+output5=$(grep -c ^ common_genes)
+echo "They have $output5 genes in common."

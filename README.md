@@ -121,3 +121,24 @@ is a connection but too many to describe them here.
 Added a [Wiki](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/wiki)
 
 -Oskar
+###April 13, 2016
+
+I have run into issues with the RNA comparison between the two genomes. Pathway Tools makes it easy to list tRNA genes
+but none of them have been successfully named by PROKKA, they're all called "PROKKA_01861" or something similar. I could
+manually copy and paste each sequence and compare them to each other.  
+The other option is that I use grep and find all RNA genes (notice that I'm talking about tRNA and RNA on purpose) that have 
+been named by PROKKA and compare them to each other. The issue with that is that that data would not apply to the tRNA genes 
+in Pathway Tools.  
+I'm not sure how to proceed.
+
+I've also expanded the named gene counting script to count the number of named genes they have in common and how many unique 
+named genes they have respectively. I also added some usability features to the script, if you run it without any input it
+prints a message which tells how to use it and also tells you about the output. But here's some stats on our current Genbank
+files.
+
+Genbank File | Unique Named genes | Total Number of Named Genes | Total Number of Genes
+--- | --- | --- | ---
+K. algicida OT-1 PROKKA | 358 | 1528 | 4478
+K. sp PROKKA | 454 | 1624 | 4749
+
+-Oskar
