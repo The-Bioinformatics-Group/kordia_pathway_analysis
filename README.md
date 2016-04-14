@@ -149,9 +149,7 @@ Created a folder for lists of genes, the genbank folder was getting cluttered.
 Also moved the images of the hightlighted pathways from Pathway Tools in the
 gene lists folder.
 
-##The following is an unorganized list of observations made from the unique
- named genes in our Kordia. It is intended as a short overview of potentially
- interesting genes.
+##The following is an unorganized list of observations made from the unique named genes in our Kordia. It is intended as a short overview of potentially interesting genes.
 
 There is a predicted L-dopachrome pathway. PROKKA has identified a gene (melC2)
  and inferred the rest of the pathway based on the presence of that gene. It 
