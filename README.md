@@ -142,3 +142,37 @@ K. algicida OT-1 PROKKA | 358 | 1528 | 4478
 K. sp PROKKA | 454 | 1624 | 4749
 
 -Oskar
+
+###April 14, 2016
+
+Created a folder for lists of genes, the genbank folder was getting cluttered.
+Also moved the images of the hightlighted pathways from Pathway Tools in the
+gene lists folder.
+
+##The following is an unorganized list of observations made from the unique
+ named genes in our Kordia. It is intended as a short overview of potentially
+ interesting genes.
+
+There is a predicted L-dopachrome pathway. PROKKA has identified a gene (melC2)
+ and inferred the rest of the pathway based on the presence of that gene. It 
+starts out with L-tyrosine and through the action of the enzyme tyrosinase it 
+produces dopaquinone, and through a spontaneously occurring reaction produces 
+leucodopachrome and finally produces dopachrome and L-dopa in the last step which
+ yet again is a reaction that can occur spontaneously.
+
+There's also a pathway for carotenoids that probably at least bares resemblance 
+to a similar pathway that is quite possibly found in K. algicida as well because
+ K. algicida has been shown to produce yellow pigmented colonies according to 
+[this article](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3147531/). The genes 
+in K. sp. for that reaction are called carA2 and crtI and the pathway goes from
+ geranylgeranyl diphosphate to all-trans-lycopene.
+
+The gene chiD is related to the formation of chitotriose which is an antioxidant, 
+[this article](http://www.ncbi.nlm.nih.gov/pubmed/12951480) has more information
+about chitotriose.
+
+The aromatic compound anthranilate is produced with the help of the gene carC, 
+anthranilate is an acid (anthranilic acid) that has several different industrial 
+uses according to [wikipedia](https://en.wikipedia.org/wiki/Anthranilic_acid).
+
+-Oskar
