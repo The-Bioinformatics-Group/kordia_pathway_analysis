@@ -28,8 +28,8 @@ grep /gene= $2 | tr -s [:space:] | cut -c 9- | sed 's/.$//' | awk '!x[$0]++' | s
 
 comm -12 $1_genes_sorted $2_genes_sorted > common_genes #this creates a list of all common genes
 
-comm -3 common_genes $1_genes_sorted > $1_unique_genes #this creates a list of genes unique to the first genbank file
-comm -3 common_genes $2_genes_sorted > $2_unique_genes #> $2_unique_genes #this does the same but for the second genbank file
+comm -3 common_genes $1_genes_sorted | cut -c 2- > $1_unique_genes #this creates a list of genes unique to the first genbank file. Cut is used to remove a tab space that gets inserted by comm before each gene name
+comm -3 common_genes $2_genes_sorted | cut -c 2- > $2_unique_genes #this does the same but for the second genbank file
 
 output1=$(grep -c ^ $1_genes_sorted)
 output2=$(grep -c ^ $1_unique_genes)

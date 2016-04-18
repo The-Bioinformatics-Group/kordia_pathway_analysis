@@ -174,3 +174,14 @@ anthranilate is an acid (anthranilic acid) that has several different industrial
 uses according to [wikipedia](https://en.wikipedia.org/wiki/Anthranilic_acid).
 
 -Oskar
+
+### April 18, 2016
+
+Changed "comm -3 common_genes $1_genes_sorted > $1_unique_genes" to 
+"comm -3 common_genes $1_genes_sorted | cut -c 2- > $1_unique_genes" 
+in order to remove a tab space that got inserted by comm.
+
+Updated the README files for the "genbank_files", "FASTA_files", "BASys", 
+"gene_lists", "mauve_analysis" and "scripts" folders. 
+
+-Oskar
