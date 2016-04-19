@@ -7,3 +7,9 @@ Each of the PROKKA_*_unique_genes files contain named genes that are unique to e
 The PROKKA_*_genes_sorted files contain the entire list of named genes for each bacteria. The genes have been sorted to be able to create the lists of unique genes.
 
 -Oskar
+
+#April 19, 2016
+
+Added the PROKKA_K-sp_V2_* files
+
+-Oskar

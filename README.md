@@ -184,4 +184,77 @@ in order to remove a tab space that got inserted by comm.
 Updated the README files for the "genbank_files", "FASTA_files", "BASys", 
 "gene_lists", "mauve_analysis" and "scripts" folders. 
 
+I looked closer into the melC2 gene and created a folder for interesting 
+genes that we investigate closer. I will put files there with specific data
+such as AA sequences that I used in my analyses.
+
+I did a protein BLAST search with the AA sequence for melC2 (the AA sequence 
+is in the file for melC2 in the "investigated_genes" folder) to see what other 
+proteins it matched, and one common match was "hemocyanin" in various organisms. 
+Hemocyanin is an equivalent to hemoglobin, i.e it carries oxygen molecules. It is 
+commonly found in molluscs and some arthropods. 
+
+The top 5 BLAST hits are hypothetical proteins, and the 6th hit is a tyrosinase in [Thaumarchaeota archaeon MY3](http://www.ncbi.nlm.nih.gov/protein/937516891?report=genbank&log$=protalign&blast_rank=6&RID=H9JU752801R).
+Tyrosinases 
+
+-Oskar
+
+###April 19, 2016
+
+Created a genus database for PROKKA with the prokka-genbank_to_fasta_db script with K. 
+algicida and K. jejudonensis as representatives for the genus, and used the new 
+database in a new PROKKA annotation of our K. sp genome. I called the [new genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/upload/master/genbank_files/PROKKA_K-sp_V2.gbk)
+"PROKKA_K-sp_V2". There is a looming question if the data in this analysis is 
+particularly useful due to possible overfitting of data. I will nontheless describe the 
+results here and sleep on it to see if I get any good ideas.
+
+To preface the following tables I am going to quickly explain how these numbers were 
+generated because this can seem unintuitive at first. I used the script [find_genes.sh](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/scripts/find_genes.sh)
+and it finds all named genes in each of the two genbank files that are used as input.
+It then compiles one list of gene names for each input file and sorts the genes 
+alphabetically. Then it compares the first list to the second and every gene from 
+file 1 that is not found in file 2 is put in its' own list of unique genes, and vice versa.
+
+The first table is a comparison of the first PROKKA annotated K. sp genome and PROKKA
+annotated K. algicida OT-1 genome. The new genbank file, PROKKA_K-sp_V2.gbk, was 
+compared to PROKKA_KalgicidaOT1.gbk in the second table, and it was compared to 
+PROKKA_K-sp.gbk in the third table.  
+
+The numbers in the first and second table show that the new annotation of our Kordia has
+ more unique named genes (490 vs 454), and more named genes than the previous one 
+(1737 vs 1624).
+
+In the second table it is evident that there are more named genes in common than in the
+ first table (1170 vs 1247). This is to be expected since part of the analysis was 
+enhanced by using the "--usegenus --genus Kordia" flags in PROKKA, but also because I 
+added a database based on the genbank files for K. jejudinensis and K. algicida OT-1 to
+ the internal database folder that PROKKA uses in its' annotation process. These two
+changes should result in an increased identification of named genes.
+
+The third table shows that the new annotation of our Kordia found 418 unique named genes and a 
+total of 170 new named genes. This begs the question why there are more new unique genes
+than the total of new genes. This is part of the question whether data has been overfitted  
+or not.
+
+Genbank File | Unique Named genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
+--- | --- | --- | --- | ---
+K. algicida OT-1 PROKKA | 358 | 1528 | 4478 | 1170
+K. sp PROKKA | 454 | 1624 | 4749 | 1170
+
+Genbank File | Unique Named genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
+--- | --- | --- | --- | ---
+K. algicida OT-1 PROKKA | 281 | 1528 | 4478 | 1247
+K. sp PROKKA V2 | 490 | 1737 | 4749 | 1247
+
+Genbank File | Unique Named genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
+--- | --- | --- | ---
+K. sp PROKKA | 305 | 1624 | 4749 | 1319
+K. sp PROKKA V2 | 418 | 1794 | 4749 | 1319
+
+I am inclined to believe that the new data is useful, but I need to do some more reading first.
+
+Here's the command I used to run the PROKKA analysis: "prokka 'kordia_pathway_analysis/FASTA_files/combined-revcomp-unitig-1-2.fasta' --outdir foldername --cpus 4 --usegenus --genus Kordia"
+
+I also added new files to the genbank_files folder, gene_lists folder and a script to the script folder. And I removed the "common_genes" file from the root folder, you need to create it yourself if you want one of your own, it doesn't make sense to keep it now that there are several different genbank files and hence several different comparisons that can result in a common_genes list.
+
 -Oskar
