@@ -4,3 +4,9 @@ In short, it takes two .gbk-files as input and extracts gene names and puts them
 [reversecomplement.r](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/scripts/reversecomplement.r) was used to make a [reverse complement](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/FASTA_files/unitig1revcomp.fasta) of [unitig 1](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/FASTA_files/seq1_16536_16552_circcq_fixed.fasta). It depends on Biostrings from Bioconductor. 
 
 -Oskar
+
+##April 19, 2016
+
+Added prokka-genbank_to_fasta_db script
+
+-Oskar
