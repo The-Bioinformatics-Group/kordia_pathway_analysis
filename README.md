@@ -247,7 +247,7 @@ K. algicida OT-1 PROKKA | 281 | 1528 | 4478 | 1247
 K. sp PROKKA V2 | 490 | 1737 | 4749 | 1247
 
 Genbank File | Unique Named genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
---- | --- | --- | ---
+--- | --- | --- | --- | ---
 K. sp PROKKA | 305 | 1624 | 4749 | 1319
 K. sp PROKKA V2 | 418 | 1794 | 4749 | 1319
 
