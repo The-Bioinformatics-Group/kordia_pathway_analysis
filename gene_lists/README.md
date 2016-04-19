@@ -12,4 +12,8 @@ The PROKKA_*_genes_sorted files contain the entire list of named genes for each 
 
 Added the PROKKA_K-sp_V2_* files
 
+<<<<<<< HEAD
 -Oskar
+=======
+-Oskar
+>>>>>>> 5dff9040d1b506b61e0e8f132d02bb219d30d7fc
