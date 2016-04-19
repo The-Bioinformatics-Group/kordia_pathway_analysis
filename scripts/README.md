@@ -5,7 +5,7 @@ In short, it takes two .gbk-files as input and extracts gene names and puts them
 
 -Oskar
 
-#April 19, 2016
+###April 19, 2016
 
 Added prokka-genbank_to_fasta_db script
 
