@@ -278,7 +278,6 @@ Genbank File | Unique Named Genes | Total Number of Named Genes | Total Number o
 K. sp PROKKA | 22 | 1624 | 4749 | 1602
 K. sp PROKKA V2 | 93 | 1695 | 4749 | 1602
 
-The difference between the two annotations is in other words not as big as it seemed before.   
 Unfortunately I do not remember how I created the previous genus database, as far as I can remember I used the same input files yesterday and today when I created the genus databases, but somehow the results differ. I have both databases and the one I'm using now is larger than the previous one, and since I have veryfied that the one I'm using now was made with correct input files, I'm certain that it is the one we should be using.
 
 And for the record, I annotated [this](http://www.ncbi.nlm.nih.gov/nuccore/820797914?report=fasta) K. jejudonensis FASTA file to create the K. jejudonensis [genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/genbank_files/PROKKA_Kjejudonensis.gbk) that I used in the prokka-genbank_to_fasta_db script together with the K. algicida [genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/genbank_files/PROKKA_KalgicidaOT1.gbk) that I had already created with PROKKA earlier.  
