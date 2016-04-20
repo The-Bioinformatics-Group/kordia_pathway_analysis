@@ -2,8 +2,15 @@ This folder contains genbank files. These files are used to create organism data
 
 -Oskar
 
-#April 19, 2016
+##April 19, 2016
 
 Added Genbank_Kjejudonensis.gbff, PROKKA_Kjejudonensis.gbk and PROKKA_K-sp_V2.gbk
+
+-Oskar
+
+##April 20, 2016
+
+Deleted Genbank_Kjejudonensis.gbff, it hasn't been used for anything.  
+Updated PROKKA_K-sp_V2.gbk to the proper one.
 
 -Oskar

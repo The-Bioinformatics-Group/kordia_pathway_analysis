@@ -258,3 +258,38 @@ Here's the command I used to run the PROKKA analysis: "prokka 'kordia_pathway_an
 I also added new files to the genbank_files folder, gene_lists folder and a script to the script folder. And I removed the "common_genes" file from the root folder, you need to create it yourself if you want one of your own, it doesn't make sense to keep it now that there are several different genbank files and hence several different comparisons that can result in a common_genes list.
 
 -Oskar
+
+###April 20, 2016
+
+I re-ran the PROKKA analyses from yesterday and noticed that some numbers had changed. I began investigating and noticed that I had not used the proper Kordia genus database yesterday. So I recreated it from scratch and ran the PROKKA annotation for our Kordia genome again. I have changed the tables to reflect the new analyses.
+
+Genbank File | Unique Named Genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
+--- | --- | --- | --- | ---
+K. algicida OT-1 PROKKA | 358 | 1528 | 4478 | 1170
+K. sp PROKKA | 454 | 1624 | 4749 | 1170
+
+Genbank File | Unique Named Genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
+--- | --- | --- | --- | ---
+K. algicida OT-1 PROKKA | 370 | 1528 | 4478 | 1158
+K. sp PROKKA V2 | 537 | 1695 | 4749 | 1158
+
+Genbank File | Unique Named Genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
+--- | --- | --- | --- | ---
+K. sp PROKKA | 22 | 1624 | 4749 | 1602
+K. sp PROKKA V2 | 93 | 1695 | 4749 | 1602
+
+The difference between the two annotations is in other words not as big as it seemed before.   
+Unfortunately I do not remember how I created the previous genus database, as far as I can remember I used the same input files yesterday and today when I created the genus databases, but somehow the results differ. I have both databases and the one I'm using now is larger than the previous one, and since I have veryfied that the one I'm using now was made with correct input files, I'm certain that it is the one we should be using.
+
+And for the record, I annotated [this](http://www.ncbi.nlm.nih.gov/nuccore/820797914?report=fasta) K. jejudonensis FASTA file to create the K. jejudonensis [genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/genbank_files/PROKKA_Kjejudonensis.gbk) that I used in the prokka-genbank_to_fasta_db script together with the K. algicida [genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/genbank_files/PROKKA_KalgicidaOT1.gbk) that I had already created with PROKKA earlier.  
+I then followed these steps to create the database:
+
+% prokka-genbank_to_fasta_db PROKKA_Kjejudonensis.gbk PROKKA_Kalgicida_OT1.gbk > Kordia.faa
+% cdhit -i Kordia.faa -o Kordia -T 0 -M 0 -g 1 -s 0.8 -c 0.9
+% rm -fv Kordia.faa Kordia.clstr
+% makeblastdb -dbtype prot -in Kordia
+% mv Kordia.p* /usr/local/bin/prokka/db/genus/
+
+To initialize the database, I ran "prokka --setupdb" before I finally ran "prokka combined-revcomp-unitig-1-2.fasta --outdir ksp --usegenus --genus Kordia"
+
+-Oskar

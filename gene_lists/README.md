@@ -8,7 +8,7 @@ The PROKKA_*_genes_sorted files contain the entire list of named genes for each 
 
 -Oskar
 
-#April 19, 2016
+###April 19, 2016
 
 Added the PROKKA_K-sp_V2_* files
 
@@ -17,3 +17,9 @@ Added the PROKKA_K-sp_V2_* files
 =======
 -Oskar
 >>>>>>> 5dff9040d1b506b61e0e8f132d02bb219d30d7fc
+
+###April 20, 2016
+
+Added a new gene list for K-sp_V2 and deleted the list of common genes and all lists of unique genes because each list is relative to the genome it was compared to, since we have more than two genomes it doesn't make sense to keep the lists of unique genes since it doesn't say which genome it was compared to. You need to run the "find_genes.sh" script if you want to view any unique genes. The lists of named genes are still valid though.
+
+-Oskar
