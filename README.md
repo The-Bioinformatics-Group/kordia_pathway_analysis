@@ -249,7 +249,7 @@ K. sp PROKKA V2 | 490 | 1737 | 4749 | 1247
 Genbank File | Unique Named genes | Total Number of Named Genes | Total Number of Genes | Genes in Common
 --- | --- | --- | --- | ---
 K. sp PROKKA | 305 | 1624 | 4749 | 1319
-K. sp PROKKA V2 | 418 | 1794 | 4749 | 1319
+K. sp PROKKA V2 | 418 | 1737 | 4749 | 1319
 
 I am inclined to believe that the new data is useful, but I need to do some more reading first.
 
