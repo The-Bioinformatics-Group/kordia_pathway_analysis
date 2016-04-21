@@ -283,7 +283,7 @@ Unfortunately I do not remember how I created the previous genus database, as fa
 And for the record, I annotated [this](http://www.ncbi.nlm.nih.gov/nuccore/820797914?report=fasta) K. jejudonensis FASTA file to create the K. jejudonensis [genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/genbank_files/PROKKA_Kjejudonensis.gbk) that I used in the prokka-genbank_to_fasta_db script together with the K. algicida [genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/genbank_files/PROKKA_KalgicidaOT1.gbk) that I had already created with PROKKA earlier.  
 I then followed these steps to create the database:
 
-% prokka-genbank_to_fasta_db PROKKA_Kjejudonensis.gbk PROKKA_Kalgicida_OT1.gbk > Kordia.faa
+% prokka-genbank_to_fasta_db PROKKA_Kjejudonensis.gbk PROKKA_Kalgicida_OT1.gbk > Kordia.faa  
 % cdhit -i Kordia.faa -o Kordia -T 0 -M 0 -g 1 -s 0.8 -c 0.9  
 % rm -fv Kordia.faa Kordia.clstr  
 % makeblastdb -dbtype prot -in Kordia  
