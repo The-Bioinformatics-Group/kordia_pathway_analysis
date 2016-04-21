@@ -295,8 +295,10 @@ To initialize the database, I ran "prokka --setupdb" before I finally ran "prokk
 
 ###April 21, 2016
 
-Added a script that strictly counts the number of named genes in a genbank file. I named it "find_genes.sh"
- and renamed the script that previously had the same name to "find_unique_genes.sh" instead.
-It better reflects the function of the script that way.
+Added a script to print and count the number of unique genes in a genbank file and
+renamed the "find_genes.sh" script to "find_unique_genes.sh" to better reflect its
+function. I also added a script that finds all protein products in a genbank file,
+it deletes all instances of "hypothetical protein", it also counts the number of
+named genes.
 
 -Oskar

@@ -10,3 +10,13 @@ In short, it takes two .gbk-files as input and extracts gene names and puts them
 Added prokka-genbank_to_fasta_db script
 
 -Oskar
+
+###April 21, 2016
+
+Added a script to print and count the number of unique genes in a genbank file and 
+renamed the "find_genes.sh" script to "find_unique_genes.sh" to better reflect its
+function. I also added a script that finds all protein products in a genbank file,
+it deletes all instances of "hypothetical protein", it also counts the number of 
+named genes.
+
+-Oskar
