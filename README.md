@@ -292,3 +292,11 @@ I then followed these steps to create the database:
 To initialize the database, I ran "prokka --setupdb" before I finally ran "prokka combined-revcomp-unitig-1-2.fasta --outdir ksp --usegenus --genus Kordia"
 
 -Oskar
+
+###April 21, 2016
+
+Added a script that strictly counts the number of named genes in a genbank file. I named it "find_genes.sh"
+ and renamed the script that previously had the same name to "find_unique_genes.sh" instead.
+It better reflects the function of the script that way.
+
+-Oskar
