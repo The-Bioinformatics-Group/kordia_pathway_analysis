@@ -284,9 +284,9 @@ And for the record, I annotated [this](http://www.ncbi.nlm.nih.gov/nuccore/82079
 I then followed these steps to create the database:
 
 % prokka-genbank_to_fasta_db PROKKA_Kjejudonensis.gbk PROKKA_Kalgicida_OT1.gbk > Kordia.faa
-% cdhit -i Kordia.faa -o Kordia -T 0 -M 0 -g 1 -s 0.8 -c 0.9
-% rm -fv Kordia.faa Kordia.clstr
-% makeblastdb -dbtype prot -in Kordia
+% cdhit -i Kordia.faa -o Kordia -T 0 -M 0 -g 1 -s 0.8 -c 0.9  
+% rm -fv Kordia.faa Kordia.clstr  
+% makeblastdb -dbtype prot -in Kordia  
 % mv Kordia.p* /usr/local/bin/prokka/db/genus/
 
 To initialize the database, I ran "prokka --setupdb" before I finally ran "prokka combined-revcomp-unitig-1-2.fasta --outdir ksp --usegenus --genus Kordia"
