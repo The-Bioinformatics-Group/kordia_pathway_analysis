@@ -302,3 +302,43 @@ it deletes all instances of "hypothetical protein", it also counts the number of
 named genes.
 
 -Oskar
+
+###April 29, 2016
+
+I spent the past Tuesday to Thursday at the 15th CeMEB assembly at Sven Lovéns
+center for marine science. There were seminaries and lectures every day about
+topics such as the marine microbiome, current research topics at the marine
+biology department at the University of Gothenburg, ideas for the development
+of future CeMEB assemblies amongst others. 
+
+The Kordia pathway analysis project was discussed and it was decided that I will
+continue the research by learning more about how to optimize PROKKA by using
+various databases and other settings that are available. I will also look at 
+other annotation methods and compare them with PROKKA.
+
+I started off with [RAST](http://rast.nmpdr.org/) and it generated a genbankfile
+that had no entries for gene names, but I ran it through Pathway Tools and created
+a pathway database anyways. I took a look at the pathway overview and found an [EC
+number](http://enzyme.expasy.org/EC/6.3.1.9) for trypanothione synthetase.  
+I did a quick search in the other Kordia genbank files but I did not find the same
+EC number. The enzyme is responsible for the production of trypanothione which is
+normally found in trypanosomatids, e.g in some Leishmania species. This is interesting
+but to my understanding is not to be expected and is likely a false positive. The 
+genbank file is in the genbank files folder.
+
+I also tried to annotate using [KAAS](http://www.genome.jp/kegg/kaas/) but it didn't
+seem to work properly, I didn't get any useful output. 
+
+I've downloaded [AGeS](http://www.bhsai.org/ages.html) and will take a look at it
+next week.
+
+I've already tried [BASys](https://www.basys.ca/) a few weeks ago but it didn't 
+produce anything that made sense, Alvar did though, but he hadn't joined the 
+two contigs in his FASTA file. I've thought about taking a look at the genbank 
+files from that annotation to see what it found. 
+
+I am planning to take a look at [Sma3s](http://www.bioinfocabd.upo.es/node/11) and
+I have downloaded a bacterial UniProt database that I will add to PROKKA and 
+hopefully improve the annotation results. 
+
+-Oskar

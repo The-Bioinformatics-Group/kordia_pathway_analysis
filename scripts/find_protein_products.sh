@@ -5,7 +5,7 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 fbname=$(basename "$1")
-grep /product= $1 | tr -s [:space:] | cut -c 12- | sed 's/.$//' | grep -Ev 'hypothetical protein' > $1_protein_products
+grep /product= $1 | tr -s [:space:] | cut -c 12- | sed 's/.$//' | grep -Ev 'hypothetical protein' | sort  > $1_protein_products
 
 output1=$(grep -c ^ $1_protein_products)
 echo "$fbname has $output1 named protein products"
