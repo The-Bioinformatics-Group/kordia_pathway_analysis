@@ -13,4 +13,8 @@ Added Genbank_Kjejudonensis.gbff, PROKKA_Kjejudonensis.gbk and PROKKA_K-sp_V2.gb
 Deleted Genbank_Kjejudonensis.gbff, it hasn't been used for anything.  
 Updated PROKKA_K-sp_V2.gbk to the proper one.
 
+##April 29, 2016
+
+Added RAST_K-sp.gbk
+
 -Oskar

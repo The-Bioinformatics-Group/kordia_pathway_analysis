@@ -19,4 +19,10 @@ function. I also added a script that finds all protein products in a genbank fil
 it deletes all instances of "hypothetical protein", it also counts the number of 
 named genes.
 
+##April 29, 2016
+
+Edited the "find_protein_products.sh" script and added "sort" to the end of the 
+grep command to sort the lines so as to be able to use the "comm" command on the
+output files.
+
 -Oskar
