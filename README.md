@@ -398,3 +398,5 @@ our Kordia.
 Last, but not least, I created a Frankenstein genus database out of several different genbank files from bacteria that are closely 
 related to our Kordia, but the results were terrible. The intended use of the function is if you have a couple of 
 annotated genomes from the same genus that you want to use as a database during the annotation process, but the way I did it isn’t how it’s meant to be used so the results shouldn’t be surprising. 
+
+-Oskar
