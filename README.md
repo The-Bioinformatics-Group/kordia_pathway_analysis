@@ -342,3 +342,59 @@ I have downloaded a bacterial UniProt database that I will add to PROKKA and
 hopefully improve the annotation results. 
 
 -Oskar
+
+###April 2, 2016
+
+New analyses have been run with PROKKA, this time I have managed to add various databases and I have 
+also added [Barrnap](https://github.com/tseemann/barrnap) which is a tool for rRNA discovery. There 
+is a setting that enables search for ncRNA which I’ve tried as well. I will detail my findings below, 
+but in short, the annotation results have returned more named genes than with the standard settings and databases.
+
+PROKKA uses HMMs and the user can add their own desired HMM databases, I downloaded a 
+[Pfam](ftp://ftp.ebi.ac.uk/pub/databases/Pfam/releases/Pfam29.0/Pfam-A.hmm.gz) database and added it to PROKKA. 
+In order to add a new HMM database, it needs to be prepared with “hmmpress database.hmm”, and the files 
+need to be placed in ~/prokka/db/hmm/. In order for PROKKA to properly recognize the new HMM database, 
+the user needs to finally run “prokka --setupdb” to initialize it. To verify that it was successful you 
+can run “prokka --listdb” to see if the database is listed with the others. I also added a 
+[TIGRFAM](ftp://ftp.jcvi.org/pub/data/TIGRFAMs/14.0_Release/TIGRFAMs_14.0_HMM.tar.gz) database, I 
+modified it slightly because it creates over 4000 individuall hmm files when extracted, so I ran 
+“cat TIGR* > TIGRFAM.hmm” to add all of them to one single hmm database as opposed to 4000+ individual 
+ones. I presume that it would be detrimental to the performance to have PROKKA go through thousands of hmm databases instead of just a handful.
+
+These results are from the last analysis I ran when I had added all databases and tested the settings 
+that I describe in this entry, I ran with this command: prokka combined-revcomp-unitig-1-2.fasta --outdir KspPfamTIG --prefix KspPfamTIG --genus Kordia --species sp --strain PfamTIGHMM --rfam  
+N.B. I use the “--genus” flag but as long as I don’t use the “--usegenus” flag it doesn’t actually 
+use the genus databases, it only puts the name in the output files.
+
+Genbank File | Unique Named Genes | Total Number of Named Genes | Total Number of Genes | Genes in Common | rRNA | ncRNA
+--- | --- | --- | --- | --- | --- | ---
+KspPfamTIG | 331 | 1798 | 4762 | 1470 | 9 | 6
+K. sp PROKKA | 154 | 1624 | 4749 | 1470 | 0 | 0  
+Since there are two new HMM databases the number of named- and named unique genes have shot up compared with the basic PROKKA installation.
+
+The addition of [Barrnap](https://github.com/tseemann/barrnap) enabled identification of rRNA sequences. When Barrnap 
+is added PROKKA finds 9 rRNA sequences. There is another tool that PROKKA can use to identify rRNA sequences called 
+RNAmmer, but I have yet to see how it performs when added to PROKKA. I plan to take a look at it tomorrow.
+
+It is also possible to identify ncRNA with the --rfam flag, it found 6 ncRNAs and it significantly adds to the time it takes to complete the annotation. Although PROKKA is quite fast to begin with, 
+needing around 3 minutes to complete, adding the --rfam flag adds ~3 minutes, effectively doubling the total time. 
+
+Another flag that I tried is the --metagenome flag, it is intended for highly fragmented genomes and might not 
+be very suitable for our purposes, but just for the sake of it I tried it and it found X number of genes. 
+
+EC Numbers in Genbank files have info on genes sometimes, and always has information about proteins. This could be exploited with some clever coding if needed. 
+
+One web based method that I tried is the [RAST](http://rast.nmpdr.org/) server and it seems pretty 
+useful. It definitely has some benefits over PROKKA, but at the same time some drawbacks. There is a genbank file 
+output available, although no entries for gene names, and gene names are nowhere to be found on the analysis results 
+page on the website so far. When starting a job there is no obvious setting that would include gene names in the 
+output. But there is a lot of information about pathways for instance, it is integrated with KEGG and I have 
+uploaded a picture of the P450 related enzymes it found to the folder “RAST”. In the image, the results show how many 
+EC’s it found out of the total known number of EC’s. The green boxes signify clickable EC’s that lead to more 
+information about the particular pathway. It’s possible to compare ones results with pathways from other organisms 
+in the menus above the pathway image. And just because there are more known pathways it doesn't mean that they exist in
+our Kordia.
+
+Last, but not least, I created a Frankenstein genus database out of several different genbank files from bacteria that are closely 
+related to our Kordia, but the results were terrible. The intended use of the function is if you have a couple of 
+annotated genomes from the same genus that you want to use as a database during the annotation process, but the way I did it isn’t how it’s meant to be used so the results shouldn’t be surprising. 
