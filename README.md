@@ -380,8 +380,13 @@ It is also possible to identify ncRNA with the --rfam flag, it found 6 ncRNAs an
 needing around 3 minutes to complete, adding the --rfam flag adds ~3 minutes, effectively doubling the total time. 
 
 Another flag that I tried is the --metagenome flag, it is intended for highly fragmented genomes and might not 
-be very suitable for our purposes, but just for the sake of it I tried it and it found X number of genes. 
+be very suitable for our purposes, but just for the sake of it I tried it and it found one less gene in total, the table below contains the rest of the details.
 
+Genbank File | Unique Named Genes | Total Number of Named Genes | Total Number of Genes | Genes in Common | rRNA | ncRNA
+--- | --- | --- | --- | --- | --- | ---
+KspPfamTIGmeta | 334 | 1797 | 4762 | 1463 | 9 | 6
+K. sp PROKKA | 161 | 1624 | 4749 | 1463 | 0 | 0
+ 
 EC Numbers in Genbank files have info on genes sometimes, and always has information about proteins. This could be exploited with some clever coding if needed. 
 
 One web based method that I tried is the [RAST](http://rast.nmpdr.org/) server and it seems pretty 
