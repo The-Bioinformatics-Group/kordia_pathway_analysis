@@ -343,7 +343,7 @@ hopefully improve the annotation results.
 
 -Oskar
 
-###April 2, 2016
+###May 2, 2016
 
 New analyses have been run with PROKKA, this time I have managed to add various databases and I have 
 also added [Barrnap](https://github.com/tseemann/barrnap) which is a tool for rRNA discovery. There 
