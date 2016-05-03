@@ -380,7 +380,9 @@ It is also possible to identify ncRNA with the --rfam flag, it found 6 ncRNAs an
 needing around 3 minutes to complete, adding the --rfam flag adds ~3 minutes, effectively doubling the total time. 
 
 Another flag that I tried is the --metagenome flag, it is intended for highly fragmented genomes and might not 
-be very suitable for our purposes, but just for the sake of it I tried it and it found one less gene in total, the table below contains the rest of the details.
+be very suitable for our purposes, but just for the sake of it I tried it and it found one less gene in total, 
+but three more uniquely named genes, 
+the table below contains the rest of the details.
 
 Genbank File | Unique Named Genes | Total Number of Named Genes | Total Number of Genes | Genes in Common | rRNA | ncRNA
 --- | --- | --- | --- | --- | --- | ---
