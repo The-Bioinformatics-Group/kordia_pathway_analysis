@@ -407,3 +407,40 @@ related to our Kordia, but the results were terrible. The intended use of the fu
 annotated genomes from the same genus that you want to use as a database during the annotation process, but the way I did it isn’t how it’s meant to be used so the results shouldn’t be surprising. 
 
 -Oskar
+
+###May 4, 2016
+
+Running PROKKA with RNAmmer for rRNA identification does not lead to a change 
+in the number of named genes, but it does lead to a slightly different prediction
+of where the rRNA begins. The table below illustrates this in detail. I suppose
+this is a matter of manual annotation. With n=1 it seems like there isn't much
+difference between barrnap and RNAmmer, Torsten Seeman, the man who wrote PROKKA
+wrote in a PROKKA manual that RNAmmer is slower but slightly more accurate, and
+ he is the one who wrote barrnap too.
+
+N.B barrnap does not report strand, the strand data comes from RNAmmer.
+
+Barrnap DNA Coordinates | RNAmmer DNA Coordinates | rRNA | Strand
+--- | --- | --- | ---
+1082961 | 1082960 | 5S ribosomal RNA | +
+3916380 | 3916379 | 5S ribosomal RNA | -
+2503316 | 2053315 | 5S ribosomal RNA | -
+2503589 | 2503584 | 23S ribosomal RNA | -
+3916653 | 3916648 | 23S ribosomal RNA | -
+1079973 | 1079967 | 23S ribosomal RNA | +
+1077942 | 1077945 | 16S ribosomal RNA | +
+2506911 | 2506916 | 16S ribosomal RNA | -
+3919975 | 3919980 | 16S ribosomal RNA | -
+
+SignalP, which identifies signal peptides, was added and the genbank file now has
+predicted signal peptide CDS entries with predicted cleavage sites.
+
+Just for the sake of it I tried running PROKKA with the output folder on a RAM 
+disk and compared it to an HDD, it took ~8 minutes instead of ~10 minutes. Having
+PROKKA on a RAM disk would inevitably improve the performance further. From what
+I can tell, it seems like the HMM analyses take the longest time, possibly due to
+lots of database reading.
+
+May the fourth be with you...
+
+-Oskar
