@@ -415,8 +415,8 @@ in the number of named genes, but it does lead to a slightly different predictio
 of where the rRNA begins. The table below illustrates this in detail. I suppose
 this is a matter of manual annotation. With n=1 it seems like there isn't much
 difference between barrnap and RNAmmer, Torsten Seeman, the man who wrote PROKKA
-wrote in a PROKKA manual that RNAmmer is slower but slightly more accurate, and
- he is the one who wrote barrnap too.
+wrote in the [readme](https://github.com/tseemann/prokka/blob/master/README.md)
+ that RNAmmer is slower but slightly more accurate, and he is the one who wrote barrnap too.
 
 N.B barrnap does not report strand, the strand data comes from RNAmmer.
 
