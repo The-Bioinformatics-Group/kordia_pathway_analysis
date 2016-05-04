@@ -432,8 +432,8 @@ Barrnap DNA Coordinates | RNAmmer DNA Coordinates | rRNA | Strand
 2506911 | 2506916 | 16S ribosomal RNA | -
 3919975 | 3919980 | 16S ribosomal RNA | -
 
-SignalP, which identifies signal peptides, was added and the genbank file now has
-predicted signal peptide CDS entries with predicted cleavage sites.
+SignalP, which identifies signal peptides, was added and the [genbank file](https://github.com/The-Bioinformatics-Group/kordia_pathway_analysis/blob/master/genbank_files/PROKKA_K-sp_V3.gbk)
+ now has predicted signal peptide CDS entries with predicted cleavage sites.
 
 Just for the sake of it I tried running PROKKA with the output folder on a RAM 
 disk and compared it to an HDD, it took ~8 minutes instead of ~10 minutes. Having
