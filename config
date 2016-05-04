@@ -1,4 +1,0 @@
-Host 16.04LTS
-    HostName 192.168.0.5
-    Port 666
-    User oks
