@@ -444,3 +444,22 @@ lots of database reading.
 May the fourth be with you...
 
 -Oskar
+
+###May 9, 2016
+
+Tried to install AGeS, several dependencies in Perl wouldn't install and I gave
+ up. I don't want to risk breaking the system by tinkering too much.
+
+Then I tried to annotate with [Sma3s](http://www.bioinfocabd.upo.es/node/11) and 
+it only found one result per FASTA file, I thought it might be a bug but it 
+turns out it's a feature. It wants the input file to have several short 
+sequences, not one long sequence as ours is. But Prokka (or Prodigal probably)
+ produces a .ffn file which is split up into each predicted nucleotide sequence
+, so I used that instead and the output includes a file with annotation statistics
+which counts the number of sequences, gene names etc, and it identified 246 gene
+names. It also found 120 related pathways. Our current pipeline is clearly more
+modular given the standardised output files and we also get more gene names etc.
+
+The next tool to test is [PANNZER](http://bioinformatics.oxfordjournals.org/content/early/2015/01/08/bioinformatics.btu851.abstract)
+, it uses a set of rather large databases so I am not able to install it on my
+ current system. 
