@@ -34,14 +34,14 @@ comm -3 common_genes $2_genes_sorted | cut -c 2- > $2_unique_genes #this does th
 output1=$(grep -c ^ $1_genes_sorted)
 output2=$(grep -c ^ $1_unique_genes)
 fbname=$(basename "$1")
-echo "$fbname has $output1 genes and $output2 unique genes."
+echo "$fbname has $output1 named genes and $output2 named unique genes."
 
 output3=$(grep -c ^ $2_genes_sorted)
 output4=$(grep -c ^ $2_unique_genes)
 fbname=$(basename "$2")
-echo "$fbname has $output3 genes and $output4 unique genes."
+echo "$fbname has $output3 named genes and $output4 named unique genes."
 
 #echo "File 1 has $output3"
 #echo "File 2 has $output4"
 output5=$(grep -c ^ common_genes)
-echo "They have $output5 genes in common."
+echo "They have $output5 named genes in common."
