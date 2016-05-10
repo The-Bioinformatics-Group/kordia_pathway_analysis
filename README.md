@@ -494,7 +494,7 @@ E-value of 5.9e-108 while the other hit had an E-value of 1.8e-39. E-values alon
 don't decide which is the correct protein, so I looked even deeper and found [this page](http://pfam.xfam.org/family/PF12388).
 It describes the Dual-action HEIGH metallo-peptidase proteins and lo and behold, 
 _protease b_ is part of them! If the correct gene is the one that codes for protease b
-, the gene name is_prtB_, in which case we'd have 1799 gene names.
+, the gene name is _prtB_, in which case we'd have 1799 gene names.
 
 This is just me mucking about though, the point I'm trying to make is that we 
 can potentially gleam some insights from various sources, the FASTA file with 
