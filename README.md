@@ -444,3 +444,62 @@ lots of database reading.
 May the fourth be with you...
 
 -Oskar
+
+###May 9, 2016
+
+Tried to install AGeS, several dependencies in Perl wouldn't install and I gave
+ up. I don't want to risk breaking the system by tinkering too much.
+
+Then I tried to annotate with [Sma3s](http://www.bioinfocabd.upo.es/node/11) and 
+it only found one result per FASTA file, I thought it might be a bug but it 
+turns out it's a feature. It wants the input file to have several short 
+sequences, not one long sequence as ours is. But Prokka (or Prodigal probably)
+ produces a .ffn file which is split up into each predicted nucleotide sequence
+, so I used that instead and the output includes a file with annotation statistics
+which counts the number of sequences, gene names etc, and it identified 246 gene
+names. It also found 120 related pathways. Our current pipeline is clearly more
+modular given the standardised output files and we also get more gene names etc.
+
+The next tool to test is [PANNZER](http://bioinformatics.oxfordjournals.org/content/early/2015/01/08/bioinformatics.btu851.abstract)
+, it uses a set of rather large databases so I am not able to install it on my
+ current system. 
+
+ -Oskar
+
+###May 10, 2016
+
+An issue each to install PANNZER and AGeS on the new Albiorix server has been 
+created, they will be tested once the new server is up an running in a few 
+weeks.
+
+Prokka has a flag called "--proteins" where the user can input a FASTA file of
+trusted AA sequences to first annotate from. I haven't tried it until now, so I
+downloaded the AA FASTA file for K. algicida OT-1 from biocyc and ran Prokka with
+it. It only found a total of 81 gene names with this setting, and after some
+comparison of this new genbank file with the K-sp_V3 version I have come up with
+some observations.  
+To begin with, a fundamental function in Prokka is that it relies upon Prodigal
+to predict AA coding sequences, these AA sequences then get compared to other
+sequences in e.g a list of trusted annotations as is intended with the 
+"--proteins" flag, or in the databases that are placed in 
+~/prokka/db/{cm,genus,hmm,kingdom}.
+
+I made a quick comparison of the first mismatch I could find, and the .gbk file
+that was created with the --proteins flag suggested _protease b_ where the .gbk
+without the --proteins suggested _Dual-action HEIGH metallo-peptidase_. To 
+make a better judgement on which could be correct I copied the AA sequence and
+did a BLASTp search on UniProt and found both of the sequences. The _protease b_
+was the first hit, while the other protein was hit number 17. The first had an
+E-value of 5.9e-108 while the other hit had an E-value of 1.8e-39. E-values alone
+don't decide which is the correct protein, so I looked even deeper and found [this page](http://pfam.xfam.org/family/PF12388).
+It describes the Dual-action HEIGH metallo-peptidase proteins and lo and behold, 
+_protease b_ is part of them! If the correct gene is the one that codes for protease b
+, the gene name is_prtB_, in which case we'd have 1799 gene names.
+
+This is just me mucking about though, the point I'm trying to make is that we 
+can potentially gleam some insights from various sources, the FASTA file with 
+AA sequences from K. algicida OT-1 being one. 
+
+-Oskar
+ 
+
