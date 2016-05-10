@@ -26,3 +26,9 @@ grep command to sort the lines so as to be able to use the "comm" command on the
 output files.
 
 -Oskar
+
+###May 9, 2016
+
+Edited find_unique_genes.sh and find_protein_products.sh and changed the output
+line to "X _named_ genes/proteins" as opposed to "X genes" because the script
+does not count the total number of genes, only the number of _named_ genes/proteins.
