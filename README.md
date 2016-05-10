@@ -463,7 +463,6 @@ modular given the standardised output files and we also get more gene names etc.
 The next tool to test is [PANNZER](http://bioinformatics.oxfordjournals.org/content/early/2015/01/08/bioinformatics.btu851.abstract)
 , it uses a set of rather large databases so I am not able to install it on my
  current system. 
-<<<<<<< HEAD
 
  -Oskar
 
@@ -502,7 +501,3 @@ can potentially gleam some insights from various sources, the FASTA file with
 AA sequences from K. algicida OT-1 being one. 
 
 -Oskar
- 
-
-=======
->>>>>>> 26eed7e644253529638dda5dca08b3592a6feb43
