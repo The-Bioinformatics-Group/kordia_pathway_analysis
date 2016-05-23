@@ -501,3 +501,43 @@ can potentially gleam some insights from various sources, the FASTA file with
 AA sequences from K. algicida OT-1 being one. 
 
 -Oskar
+
+###May 23, 2016
+
+Pathway Tools has been updated to version 20.0 and I feel it's time to update and
+ summarize the findings so far. I installed the new Pathways Tools version
+ to see if there are any changes to our pathway analysis with the new MetaCyc 
+database.  
+Prokka has been updated with the latest [UniProt Swiss-Prot database](ftp://ftp.uni$
+published on May 11, 2016 and a new analysis has been run. I realized that I
+haven't updated the pathway analysis results from Prokka V3 yet, so here's some
+old new information too.
+
+Organism | Pathways | Named genes | Protein Genes | RNA Genes | Size (bp)
+-------- | -------- | ----------- | ------------- | --------- | --------
+K. sp Prokka | 224 | 1624 | 4686 | 63 | 5,493,758
+K. sp Prokka V3 | 216 | 1798 | 4683 | 78 | 5,493,758
+K. sp Prokka V4 | 217 | 1798 | 4683 | 78 | 5,493,758
+
+Version 3 and 4 have the exact same genes except for one where they disagree,
+V3 puts "rlmb", a gene for an rRNA where V4 puts "trmH_2", a gene for a tRNA.
+The old sprot database has two entries for the trmH gene while the new database
+has four entries for the trmH gene. It would be interesting to see how the sequ$
+was aligned to the sprot sequences during the annotation process.
+
+The first time we annotated our Kordia genome with Prokka it was with the vanilla
+Prokka installation. It comes with a Uniprot Swiss-Prot database from November
+ 2015 and a HMM database of unknown origin. The Prokka README does not say where 
+the HMM database is from.
+
+On May 2 Prokka was updated with HMM databases from Pfam and TIGRFAM, these 
+databases have had the biggest impact on the number of named genes, going from ~1600
+to ~1800 named genes. I have also tried various optional tools for rRNA and ncRNA 
+identification. The genbank file now includes entries for signal peptide locations. 
+
+I have also tried various other annotations tools to compare with Prokka. The most
+useful tool so far is the [RAST](http://rast.nmpdr.org/) server. It produces
+a rich output full of information about pathways, reactants, products, predicted
+AA sequences and much more. The output folder from my RAST analysis is 400Mb big.
+
+-Oskar
