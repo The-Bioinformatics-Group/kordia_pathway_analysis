@@ -522,7 +522,7 @@ K. sp Prokka V4 | 217 | 1798 | 4683 | 78 | 5,493,758
 Version 3 and 4 have the exact same genes except for one where they disagree,
 V3 puts "rlmb", a gene for an rRNA where V4 puts "trmH_2", a gene for a tRNA.
 The old sprot database has two entries for the trmH gene while the new database
-has four entries for the trmH gene. It would be interesting to see how the sequ$
+has four entries for the trmH gene. It would be interesting to see how the sequence
 was aligned to the sprot sequences during the annotation process.
 
 The first time we annotated our Kordia genome with Prokka it was with the vanilla
