@@ -508,7 +508,7 @@ Pathway Tools has been updated to version 20.0 and I feel it's time to update an
  summarize the findings so far. I installed the new Pathways Tools version
  to see if there are any changes to our pathway analysis with the new MetaCyc 
 database.  
-Prokka has been updated with the latest [UniProt Swiss-Prot database](ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/uniprot_sprot_bacteria.dat.gz
+Prokka has been updated with the latest [UniProt Swiss-Prot database](ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/taxonomic_divisions/uniprot_sprot_bacteria.dat.gz)
 published on May 11, 2016 and a new analysis has been run. I realized that I
 haven't updated the pathway analysis results from Prokka V3 yet, so here's some
 old new information too.
