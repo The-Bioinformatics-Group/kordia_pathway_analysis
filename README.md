@@ -569,7 +569,7 @@ _yxlF_. Hamap returned the ABC_TRANSPORTER_2 profile.
 But then I ran the same AA sequence on the http://myhits.isb-sib.ch/cgi-bin/motif_scan
 website and it produces a visual output of the alignment, as well as information on
 how much of the sequence that was matched. I ran the analysis with the HAMAP 
-profiles and PROSITE patterns databases and the output was a bit more informative
+profiles and Pfam HMMs databases and the output was a bit more informative
 than what was learned from the three previous searches. The following table sums it
 up. Keep in mind that the entire predicted AA sequence is 310 AA long. 
 
