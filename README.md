@@ -541,3 +541,45 @@ a rich output full of information about pathways, reactants, products, predicted
 AA sequences and much more. The output folder from my RAST analysis is 400Mb big.
 
 -Oskar
+
+###May 30, 2016
+
+Added a new HMM from [SUPERFAMILY](http://supfam.org/SUPERFAMILY/howto_use_models.html),
+ it's necessary to create an account in order to download the database. I ran 
+the new database with Prokka and it didn't change the annotation results.
+
+I also tried the "-hmms [x]" flag. The -hmms flag
+is used to force Prokka to annotate from the specified HMM first. The only 
+viable results came from using "-hmms /usr/local/bin/prokka/db/hmms/HAMAP.hmm".
+It increased the number of named genes from 1798 to 1843, but the number of unique
+genes increased to 705 which raises the question of which annotation result is more
+accurate.
+
+When the genbank file was run in Pathway Tools it resulted in 179 identified pathways,
+as opposed to 217 pathways for the previous genbank file. Due to the large number of
+unique genes there were several new pathways. In order to analyze the viability of
+the results I chose a new pathway at random, found the gene name and ran a BLASTp 
+analysis with the AA sequence on UniProt, NCBI and hamap.expasys.org to see what they 
+would return. I chose the hamap website because I used the hamap HMM database to 
+annotate from first, my idea was that I would possibly find the same gene on the 
+hamap webserver.
+
+Both UniProt and NCBI's BLASTp returned the K. algicida OT-1 _ABC Transporter_ gene
+_yxlF_. Hamap returned the ABC_TRANSPORTER_2 profile.
+But then I ran the same AA sequence on the http://myhits.isb-sib.ch/cgi-bin/motif_scan
+website and it produces a visual output of the alignment, as well as information on
+how much of the sequence that was matched. I ran the analysis with the HAMAP 
+profiles and PROSITE patterns databases and the output was a bit more informative
+than what was learned from the three previous searches. The following table sums it
+up. Keep in mind that the entire predicted AA sequence is 310 AA long. 
+
+Database | pos | Raw Score | N-Score | E-Value | Protein
+-------- | --- | --------- | ------- | ------- | -------
+HAMAP | 19-254 | 1340 | 13.781 | 3.5E-07 | Vitamin B12 Import ATP-Binding Protein btuD
+Pfam | 40-215 | 187.1 | 63.534 | 6.2E-57 | ABC Transporter
+
+Based on this information, the question becomes whether longer sequence coverage 
+(Vit B12 gene) or better E-value (ABC Transporter) weighs heavier in the final 
+assesment.
+
+-Oskar
