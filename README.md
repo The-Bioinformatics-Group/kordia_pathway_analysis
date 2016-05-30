@@ -560,7 +560,8 @@ as opposed to 217 pathways for the previous genbank file. Due to the large numbe
 unique genes there were several new pathways. In order to analyze the viability of
 the results I chose a new pathway at random, found the gene name and ran a BLASTp 
 analysis with the AA sequence on UniProt, NCBI and hamap.expasys.org to see what they 
-would return. I chose the hamap website because I used the hamap HMM database to 
+would return. The AA sequence is at the end of this entry. I chose the hamap website 
+because I used the hamap HMM database to 
 annotate from first, my idea was that I would possibly find the same gene on the 
 hamap webserver.
 
@@ -581,5 +582,14 @@ Pfam | 40-215 | 187.1 | 63.534 | 6.2E-57 | ABC Transporter
 Based on this information, the question becomes whether longer sequence coverage 
 (Vit B12 gene) or better E-value (ABC Transporter) weighs heavier in the final 
 assesment.
+
+AA sequence that was used in the alignment analyses above:
+
+MYNQSKNYITLETILTLQNLSKNYKKVKAVQNLSFTIEKGNVYG  
+ILGPNGSGKSTTLGMVLNVVNRTSGNFHWFNGNVAVHDALKRVGAIIERPNFYPYMTA  
+YDNLKLVCKIKNVSKDKIDEKLELVGLIDRKDSKFKTFSLGMKQRLAIASALLNDPEI  
+LILDEPTNGLDPQGIHQIREIIKEIATQGTTILLASHLLDEVEKVCSHVVILRQGVKI  
+YAGRVDEMVASQGFFELKTDKEAELLELLEAHPSFGTVNKEEDIIKAFLTEPLNAADF  
+NKAMFAQGIVLSHLVNRKESLEEQFLQLTENQSN
 
 -Oskar
