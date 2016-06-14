@@ -709,7 +709,7 @@ amino acids into catecholamines such as dopamine and adrenaline. A lack of THB r
 dopamine-responsive dystonia, phenylketonuria and other serious diseases. THB is uncommon in 
 bacteria, yeast and fungi, but present in every cell in higher animals. Not much information 
 is readily available regarding THB in bacteria, here is an article about THB in the fungus 
-_Mortierella alpina_: http://mic.microbiologyresearch.org/content/journal/micro/10.1099/mic.0.051847-0
+_Mortierella alpina_: http://mic.microbiologyresearch.org/content/journal/micro/10.1099/mic.0.051847-0  
 Nih: https://ghr.nlm.nih.gov/gene/GCH1  
 SolCyc: http://solcyc.solgenomics.net/LYCO/NEW-IMAGE?object=TETRA-H-BIOPTERIN
 
