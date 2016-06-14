@@ -601,7 +601,7 @@ genes. The following list contains a short description of the gene(s) in questio
 list as I find more interesting genes. 
 
 ###Toxins  
-**Linamarin/lotaustralin – gene bglX_1 and 2.**  
+**Linamarin/lotaustralin – gene bglX_1 and 2**  
 Linamarin breaks down into acetone cyanohydrin 
 which is extremely toxic.  
 Pubmed: https://www.ncbi.nlm.nih.gov/pubmed/9438470?dopt=Abstract  
@@ -610,39 +610,40 @@ The genes bglX_1 and 2 are also involved in taxiphyllin (as described below), me
 coumarinate, scopolin, neolinustatin, linustatin, they all have varying degrees of relationship to 
 hydrogen cyanide)  
 
-**Taxiphyllin/Dhurrin – gene bglX_1 and 2, periplasmic beta glucosidase.**  
+**Taxiphyllin/Dhurrin – gene bglX_1 and 2, periplasmic beta glucosidase**  
 Commonly found in plants. Breaks down into hydrogen cyanide which is potentially toxic to humans and many other 
 organisms.  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=NIL&object=PWY-7089&redirect=T  
 
-**Bacillosamine – gene pglC, a UDP sugar.**  
+**Bacillosamine – gene pglC, a UDP sugar**  
 Bacillosamine is a prokaryote specific sugar that is 
 related to microbial pathogenicity.  
 Pubmed: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3951908/  
 MetaCyc: http://www.metacyc.org/META/NEW-IMAGE?type=REACTION&object=RXN-13269  
 
-**Hypoglycin A/B – gene ggt, a hypoglycine.**  
+**Hypoglycin A/B – gene ggt, a hypoglycine**  
 Present in a number of plants, causes hypoglycemia (low blood sugar) and vomiting.  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=REACTION&object=RXN-9157  
 
-**L-canavanine – gene argH, argG.**  
+**L-canavanine – gene argH, argG**  
 L-canavanine is an aminoacid that is closely related to 
 L-arginine. Due to this close relationship, some organisms mistakenly incorporate L-canavanine 
 into proteins which causes a malformed protein and subsequent toxicity to the host. There is 
 evidence linking canavanine to autoimmune diseases in humans. The pathway is reversible from 
 L-canavanine to L-canavaninosuccinate which could mean that our Kordia tolerates it, and 
-possibly indirectly uses it as a toxin. 
+possibly indirectly uses it as a toxin.  
 Pubmed, general info: http://www.ncbi.nlm.nih.gov/pubmed/331385  
 Pubmed, autoimmune info: http://www.ncbi.nlm.nih.gov/pubmed/16890899  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object=PWY-5  
 
 ###Pigment  
-**Quercetin – gene qdoI, yhhW_1 and 2, a hydroxyflavone.**  
+**Quercetin – gene qdoI, yhhW_1 and 2, a hydroxyflavone**  
 Quercetin is a yellow pigment that is naturally found in grapes.  
-Has potential anti allergic effects: http://www.ncbi.nlm.nih.gov/pubmed/27187333  
+Has potential anti allergic effects.  
+Pubmed: http://www.ncbi.nlm.nih.gov/pubmed/27187333  
 MetaCyc: http://www.biocyc.org/BSUB/NEW-IMAGE?type=REACTION&object=QUERCETIN-23-DIOXYGENASE-RXN  
 
-**Thiocyanate – gene glpE_1, 2 and 3.**  
+**Thiocyanate – gene glpE_1, 2 and 3**  
 Thiocyanate is synthesized from hydrogen cyanide and is 
 toxic, although not as toxic as hydrogen cyanide since it is used as medicine in some cases. 
 It forms a red pigment when combined with iron ions and blue pigment when combined with cobalt 
@@ -650,24 +651,24 @@ ions.
 Wikipedia: https://en.wikipedia.org/wiki/Thiocyanate  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=REACTION&object=THIOSULFATE-SULFURTRANSFERASE-RXN  
 
-**Homogentisate – gene hpd.**  
+**Homogentisate – gene hpd**  
 Associated with brown pigment production in Xanthomonas campestris 
 as well as in the yeast _Yarrowia lipolytica_.  
 Journal article: http://aem.asm.org/content/67/8/3463  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=REACTION&object=4-HYDROXYPHENYLPYRUVATE-DIOXYGENASE-RXN  
 
 ###Antibiotics  
-**Kanamycin A/B/C/D/X – gene kanE.**  
-Kanamycin is an aminoglycosidic antibiotic. More information 
-about mechanism of action etc: http://www.drugbank.ca/drugs/DB01172  
+**Kanamycin A/B/C/D/X – gene kanE**  
+Kanamycin is an aminoglycosidic antibiotic. 
+DrugBank: http://www.drugbank.ca/drugs/DB01172  
 MetaCyc (only for kanamycin A): http://www.metacyc.org/META/NEW-IMAGE?type=REACTION&object=RXN-13125  
 
-**Novobiocin A – gene novN_1 and 2.**  
+**Novobiocin A – gene novN_1 and 2**  
 Novobiocin is an aminocoumarin antibiotic derived from _Streptomyces niveus_.  
 Drugbank: http://www.drugbank.ca/drugs/DB01051  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=REACTION&object=RXN-14546  
 
-**Gramicidin S – gene grsB_1-7.**  
+**Gramicidin S – gene grsB_1-7**  
 Active against gram positive and gram negative bacteria. 
 Synthesis of gramicidin S seems to be dependent upon the gene grsA, and it does not seem to 
 have been identified during the annotation process. The pathway goes both ways and the gene 
@@ -675,7 +676,7 @@ could therefore be purely for resistance purposes in case of exposure to gramici
 Pubmed: http://www.ncbi.nlm.nih.gov/pubmed/26886453  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object=PWY-6003  
 
-**Rebeccamycin – gene rebM_1 and 2.**  
+**Rebeccamycin – gene rebM_1 and 2**  
 Antitumoral indolecarbazole, requires gene products that 
 depend on genes that haven't been found during the annotation process. See the MetaCyc link 
 for a complete list of genes necessary for synthesis of rebeccamycin.  
@@ -683,13 +684,13 @@ Pubmed: http://www.ncbi.nlm.nih.gov/pubmed/11983340
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=PATHWAY&object=PWY-6324
 
 ###ssRNA  
-**Polyribonucleotide nucleotidyltransferase – gene pnp.**  
+**Polyribonucleotide nucleotidyltransferase – gene pnp**  
 Involved in mRNA degradation.  
 UniProt: http://www.uniprot.org/uniprot/P05055  
 MetaCyc: http://www.metacyc.org/META/NEW-IMAGE?type=REACTION&object=2.7.7.8-RXN  
 
 ###Lactones  
-**VAI-1-2, VAI-1, HAI-1, PAI-1-2, PAI-1, AAI-1 – genes quiP_1 and 2.**  
+**VAI-1-2, VAI-1, HAI-1, PAI-1-2, PAI-1, AAI-1 – genes quiP_1 and 2**  
 These lactones are 
 all produced with L-homoserine lactone and some form of -oate as substrate, e.g octanoate. 
 These lactones act as quorum quenching molecules and they possibly interact with the lux 
@@ -702,14 +703,13 @@ Pubmed article about another bacteria with the quip genes mentioned: http://www.
 BioCyc: http://www.biocyc.org/gene?orgid=CLON1225176&id=G10TR-3047#tab=RXNS  
 
 ###Other  
-**Tetrahydrobiopterine (THB) – gene phhA.**  
+**Tetrahydrobiopterine (THB) – gene phhA**  
 THB is an enzyme responsible for conversion of 
 amino acids into catecholamines such as dopamine and adrenaline. A lack of THB results in 
 dopamine-responsive dystonia, phenylketonuria and other serious diseases. THB is uncommon in 
 bacteria, yeast and fungi, but present in every cell in higher animals. Not much information 
 is readily available regarding THB in bacteria, here is an article about THB in the fungus 
-_Mortierella alpina_: 
-http://www.microbiologyresearch.org/docserver/fulltext/micro/157/11/3059_mic051847.pdf?expires=1465907719&id=id&accname=guest&checksum=A5CE8B042585E334840A63828A9ED091  
+_Mortierella alpina_: http://mic.microbiologyresearch.org/content/journal/micro/10.1099/mic.0.051847-0
 Nih: https://ghr.nlm.nih.gov/gene/GCH1  
 SolCyc: http://solcyc.solgenomics.net/LYCO/NEW-IMAGE?object=TETRA-H-BIOPTERIN
 
