@@ -786,3 +786,5 @@ I would recommend that you continue to use “--rfam” for ncRNA detection, “
 Other than that, I think it is time to look closer at the data and attempt to experimentally verify the presence of potentially interesting genes. The entry above this one called “June 14/16, 2016”, contains a list of genes that could be of interest in future projects. The genome also needs to be properly sequenced as far as I understand it. 
 
 Regarding Pathway Tools, read the [Wiki](https://github.com/oskarvid/Tutorials/wiki) to learn how to create databases, look at pathway overviews and such. The highlight feature (Overviews - > Show Cellular Overview and then click on Overviews - > Highlight - > Proteins/Pathways/etc) is very useful. It marks e.g every pathway that a specific gene is involved with. The species comparison option, also available in the Overviews - > Highlight menu, is useful as well. There's too much to write about Pathway Tools, the features are at times quirky and buggy, but it is a very useful tool indeed!
+
+-Oskar
