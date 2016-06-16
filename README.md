@@ -716,7 +716,7 @@ Nih: https://ghr.nlm.nih.gov/gene/GCH1 SolCyc:
 http://solcyc.solgenomics.net/LYCO/NEW-IMAGE?object=TETRA-H-BIOPTERIN  
 
 **Spermidine, spermine, putrescine etc – speG, paiA_1 and 2**  
-These polyamines have a multitude of uses in science and in the bacterial cell. They aren't unique, but still interesting since they're so universal for life and have many industrial uses.
+These polyamines have a multitude of uses in science and in the bacterial cell. They aren't unique, but still interesting since they're so universal for life and have many industrial uses.  
 Article: http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2958.2008.06126.x/pdf  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=EC-NUMBER&object=EC-2.3.1.57  
 
@@ -726,7 +726,7 @@ Pubmed – antifungal properties: http://www.ncbi.nlm.nih.gov/pubmed/27298599
 Pubmed – review article: http://www.ncbi.nlm.nih.gov/pubmed/27196916  
 
 **Bile Acid/Chenodeoxycholate/Cholate – gene cbh**  
-Bile, or gall, is a dark green to yellowish brown fluid, produced by the liver of most vertebrates, that aids in the digestion of lipids in the small intestine. Bile also has antibacterial properties, although gram negative bacteria are generally more tolerant of it.
+Bile, or gall, is a dark green to yellowish brown fluid, produced by the liver of most vertebrates, that aids in the digestion of lipids in the small intestine. Bile also has antibacterial properties, although gram negative bacteria are generally more tolerant of it.  
 Article: http://onlinelibrary.wiley.com/doi/10.1016/j.femsre.2004.09.003/pdf  
 MetaCyc: http://metacyc.org/META/NEW-IMAGE?type=REACTION&object=RXN-17388  
 
