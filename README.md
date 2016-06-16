@@ -738,7 +738,7 @@ During the course of this project I have drawn some conclusion and learned a few
 
 **Alternative annotation methods**  
 1. Sma3s: It didn't produce many successfully annotated genes  
-2. RAST: It has a very rich and potentially useful output, although it didn't produce a single  
+2. RAST: It has a very rich and potentially useful output, although it didn't produce a single 
 gene name, it did however produce an extensive amount of data about protein products, 
 EC accession numbers, pathways and much much more  
 3. BASyS: It works but doesn't produce useful results when our combined FASTA file is used, it
@@ -748,34 +748,34 @@ suddenly finds over 17000 genes which is pure nonsense
 I tried to run PANNZER and AGeS but couldn't install them. PANNZERs' database was too big 
 for my available hard drives and AGeS wouldn't install due to missing dependencies.
 
-**Prokka consists of the following core modules**  
-Prodigal: Finds hypothetical genes  
-Aragorn: tRNA detection  
-BLASTp: Searches FASTA files with amino acid sequences  
+**Prokka consists of the following core modules**  
+Prodigal: Finds hypothetical genes  
+Aragorn: tRNA detection  
+BLASTp: Searches FASTA files with amino acid sequences  
 Infernal: ncRNA detection  
-Cmpress: Required for Infernal  
-Hmmpress: Required for HMM database creation  
-Hmmscan: Scans HMM databases  
-Makeblastdb: Creates BLAST databases  
-Tbl2asn: Creates GenBank compliant files  
+Cmpress: Required for Infernal  
+Hmmpress: Required for HMM database creation  
+Hmmscan: Scans HMM databases  
+Makeblastdb: Creates BLAST databases  
+Tbl2asn: Creates GenBank compliant files  
 
-**In addition to these core modules, it is possible to use the following optional tools:**  
-Barrnap - rRNA detection (Fast, less precise)  
-RNAmmer - rRNA detection (Slow, more precise)  
-SignalP - Signal peptide detection  
+**In addition to these core modules, it is possible to use the following optional tools:**  
+Barrnap - rRNA detection (Fast, less precise)  
+RNAmmer - rRNA detection (Slow, more precise)  
+SignalP - Signal peptide detection  
 
 **Prokka goes through the following steps in the annotation process:**  
-1. Find tRNAs with Aragorn  
-2. Find rRNAs (if barrnap or RNAmmer (requires hmmer 2.3.2) is installed)  
-3. Find ncRNAs (if flag “--rfam” is used)  
-4. Find coding sequences with prodigal  
-5. Find signal peptides (If SignalP is installed and if “--gram -/neg” or +/pos is used)  
+1. Find tRNAs with Aragorn  
+2. Find rRNAs (if barrnap or RNAmmer (requires hmmer 2.3.2) is installed)  
+3. Find ncRNAs (if flag “--rfam” is used)  
+4. Find coding sequences with prodigal  
+5. Find signal peptides (If SignalP is installed and if “--gram -/neg” or +/pos is used)  
 6. Use genus specific database and use ~/prokka/db/genus/desiredgenus to annotate from,
- contains AA sequences. Requires the flag “--usegenus” and “--genus desiredgenus”  
-7. Use user submitted trusted protein FASTA file to annotate from, requires “--protein file.ffn”  
-8. Runs BLAST on kingdom specific AA FASTA file  
+ contains AA sequences. Requires the flag “--usegenus” and “--genus desiredgenus”  
+7. Use user submitted trusted protein FASTA file to annotate from, requires “--protein file.ffn”  
+8. Runs BLAST on kingdom specific AA FASTA file  
 9. Runs hmmer3 and searches ~/prokka/db/hmm/  
-10 Runs tbl2asn to create genbank compliant files  
+10. Runs tbl2asn to create genbank compliant files  
 
 Prokka has been kept up to date with the latest UniProt sprot database. Hidden Markov Model databases from Pfam, TIGRFAM, SUPERFAMILY have been added for increased annotation results. The addition of the SUPERFAMILY database had no discernible impact on the annotation results.
 
